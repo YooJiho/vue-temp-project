@@ -27,6 +27,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+       '@/assets/scss/service.scss',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -43,7 +44,14 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/style-resources',
+    'semantic-ui-vue/nuxt'
   ],
+  styleResources: {
+    scss: [
+        '@/assets/scss/global.scss',
+    ]
+  },
   /*
   ** Build configuration
   */

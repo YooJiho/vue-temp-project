@@ -2,13 +2,22 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">
+      <h1 class="title scss-test">
         vue-typescript
       </h1>
       <h2 class="subtitle">
         My dazzling Nuxt.js project
       </h2>
       <div class="links">
+        <div>
+          <sui-button>Click Here</sui-button>
+          <sui-button content="Content as a prop" />
+          <div is="sui-button">This is a div</div>
+        </div>
+        <div>
+    <sui-button primary>Primary</sui-button>
+    <sui-button secondary>Secondary</sui-button>
+  </div>
         <a
           href="https://nuxtjs.org/"
           target="_blank"
@@ -50,8 +59,7 @@ export default Vue.extend({
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  
   display: block;
   font-weight: 300;
   font-size: 100px;
@@ -70,4 +78,10 @@ export default Vue.extend({
 .links {
   padding-top: 15px;
 }
+</style>
+
+<style lang="scss" scope>
+  .scss-test {
+    color:$primary;
+  }
 </style>

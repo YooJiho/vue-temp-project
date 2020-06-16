@@ -1,0 +1,11 @@
+.mi-row {
+    @include make-row();
+}
+
+@include make-columns($interval-sm);
+
+.mi-flex {
+    @include make-flex();
+}
+
+@include make-flex-items($interval-sm);

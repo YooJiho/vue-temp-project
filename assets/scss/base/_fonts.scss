@@ -1,0 +1,32 @@
+// fonts.scss
+// MUST'IT Service system font
+
+@mixin get-fontface($font-name, $type) {
+    @each $weight-figure, $weight in $font-weight-list {
+        $loopIgnore : $font-name == 'NotoSerif' and ($weight-figure == 300 or $weight-figure == 500);
+
+        @if not $loopIgnore {
+            @font-face {
+                font : {
+                    family : $font-name;
+                    style : normal;
+                    weight : $weight-figure;
+                }
+                src : url($font-url + '/' + $font-name + '/' + $font-name + '-' + $weight + '.eot');
+                src : url($font-url + '/' + $font-name + '/' + $font-name + '-' + $weight + '.eot?#iefix') format('embedded-opentype'),
+                      url($font-url + '/' + $font-name + '/' + $font-name + '-' + $weight + '.woff2') format('woff2'),
+                      url($font-url + '/' + $font-name + '/' + $font-name + '-' + $weight + '.woff') format('woff'),
+                      url($font-url + '/' + $font-name + '/' + $font-name + '-' + $weight + '.' + $type) format(if($type == 'ttf', 'truetype', 'opentype'));
+            }
+        }
+    }   
+}
+
+// Noto Sans
+@include get-fontface('NotoSansKR', 'otf');
+
+// Noto Serif
+@include get-fontface('NotoSerif',  'otf');
+
+// Roboto
+@include get-fontface('Roboto',  'ttf');
