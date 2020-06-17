@@ -39,13 +39,16 @@ $interval-md : 20px !default;
 $interval-lg : 30px !default; 
 
 // font config
-$font-family: 'NotoSansKR', 'Apple SD Gothic Neo', sans-serif;
+$font-family: 'NotoSansKR', 'Apple SD Gothic Neo', sans-serif !default;
 $font-weight-list : (
     300 : Light, 
     400 : Regular, 
     500 : Medium, 
     700 : Bold
-);
+) !default;
+
+// font-size limit
+$font-size-limit : 30 !default;
 
 // url
-$font-url : 'https://mustit-ux.s3.ap-northeast-2.amazonaws.com/lib/font-awesome' !default;
+$font-url : 'https://mustit-ux.s3.ap-northeast-2.amazonaws.com/lib/fonts' !default;

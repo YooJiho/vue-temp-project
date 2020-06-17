@@ -1,4 +1,4 @@
-// fonts.scss
+// typography.scss
 // MUST'IT Service system font
 
 @mixin get-fontface($font-name, $type) {
@@ -30,3 +30,6 @@
 
 // Roboto
 @include get-fontface('Roboto',  'ttf');
+
+// font-size
+@include get-fontsize();
