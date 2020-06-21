@@ -1,19 +1,5 @@
-/*
- * MUST'IT Service SCSS v1.0.0 (https://mustit.co.kr/)
- * Copyright 2019 MUST'IT, Inc.
- * Licensed under MIT (https://github.com/mustit-dev/web)
- */
- 
-// global
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/functions";
+
 
 // reset
 @import "base/reset";
-
-// layout
-@import "layout/grid";
-
-// components
 @import "components/typography";
