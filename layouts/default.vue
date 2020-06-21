@@ -1,4 +1,5 @@
 <template>
+	<div>
 	<sui-menu inverted fixed>	
 		<sui-container>
 			<sui-menu-item is="sui-menu-header">FakeBook</sui-menu-item>
@@ -13,6 +14,8 @@
 
 		</sui-container>
 	</sui-menu>
+	<nuxt />
+	</div>
 </template>
 
 <script>

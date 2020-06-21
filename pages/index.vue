@@ -28,7 +28,7 @@
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
-          class="button--grey"
+          class="button--grey test-title"
         >
           GitHub
         </a>
@@ -48,6 +48,10 @@ export default Vue.extend({
 })
 </script>
 
-<style>
+<style lang="scss" scope>
+  @import 'assets/scss/pages/home';
 
+  .test {
+    font-size:123px;
+  }
 </style>

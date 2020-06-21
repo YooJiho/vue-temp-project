@@ -1,0 +1,8 @@
+// get font size
+@mixin  get-fontsize() {
+    @for $i from 10 through $font-size-limit {
+        .mi-fs-#{$i} {
+            font-size : $i+px;
+        }
+    }
+}

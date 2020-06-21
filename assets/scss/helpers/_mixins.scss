@@ -1,68 +1,8 @@
 // mixins.scss
 // MUST'IT Service common css group
 
-// clearfix
-@mixin clearfix() {
-    &::after {
-      display: block;
-      clear: both;
-      content: '';
-    }
-}
-
-// grid
-@mixin flex-display() {
-    display: flex;
-    display: -webkit-flex;
-    display: -moz-flex;
-}
-
-@mixin make-row($margin-x: $interval-basic) {
-    margin-right: $margin-x;
-    margin-left: $margin-x;
-    @include clearfix();
-}
-
-@mixin make-columns($padding-x: $interval-basic) {
-    @for $i from 1 through $grid-columns {
-        .mi-col-#{$i} {  
-            float: left;
-            box-sizing: border-box;
-            padding-left: $padding-x;
-            padding-right: $padding-x;
-            width: percentage($i / $grid-columns);
-        }
-    }
-}
-
-@mixin make-flex($padding-x: $interval-basic) {
-	padding-left:$padding-x;
-	padding-right:$padding-x;
-	flex-wrap : wrap;
-	align-items : stretch;
-	@include flex-display();
-}
-
-@mixin make-flex-items($padding-x: $interval-basic) {
-    @for $i from 1 through $grid-columns {
-        .mi-flex-item-#{$i} {
-            padding-left: $padding-x;
-            padding-right: $padding-x;
-            box-sizing:border-box;
-            order: 1;
-            flex: 0 1 percentage($i / $grid-columns);
-            max-width: percentage($i / $grid-columns);
-        }
-    }
-}
-
-// get font size
-@mixin  get-fontsize() {
-    @for $i from 10 through $font-size-limit {
-        .mi-fs-#{$i} {
-            font-size : $i+px;
-        }
-    }
-}
+@import '../mixins/clearfix';
+@import '../mixins/grid';
+@import '../mixins/typography';
 
 //...
