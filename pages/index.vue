@@ -1,9 +1,9 @@
 <template>
-    <sui-container style="margin:20px 0">
-        <post-card />
-        <post-card />
-        <post-card />   
-    </sui-container>
+  <sui-container style="margin:20px 0">
+    <post-card />
+    <post-card />
+    <post-card />   
+  </sui-container>
 </template>
 
 <script>
