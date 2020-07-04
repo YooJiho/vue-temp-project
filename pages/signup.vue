@@ -63,7 +63,16 @@ export default {
             this.termValid = this.terms;
             this.valid = this.emailValid && this.pwdValid && this.pwdChkValid && this.nickValid && this.termValid;
             if (this.valid) {
-                alert('통과');
+                this.$store.dispatch('users/signUp', {
+                  nickname : this.nickname,
+                  email : this.email
+                }).then(() => {
+                  this.$router.push({
+                    path : '/'
+                  })
+                }).catch((err) => {
+                  console.log(err);
+                });
             } else {
                 alert('아직 안됨');
             }
@@ -75,7 +84,7 @@ export default {
         };
     }
 }
-</script>
+</script> 
 
 <style lang="scss" scope>
 
